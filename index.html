@@ -1,297 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Majid Mehmood — Android &amp; Web Developer</title>
-  <meta name="description" content="Majid Mehmood — Computer Science graduate and Android & full-stack web developer." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Majid Mehmood — Android Developer | Software Developer</title>
+<meta name="description" content="Majid Mehmood — Android and web developer in Lahore. Java, Firebase and SQLite on mobile; WordPress, HTML, CSS and JavaScript on the web." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Animated background -->
-  <div class="bg" aria-hidden="true">
-    <span class="aurora aurora-1"></span>
-    <span class="aurora aurora-2"></span>
-    <span class="grain"></span>
+<!-- ===== ambient background ===== -->
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="aurora a"></div><div class="aurora b"></div><div class="aurora c"></div>
+</div>
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<!-- ===== navigation ===== -->
+<header id="header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#home" style="color:inherit;text-decoration:none"><i></i>Majid Mehmood</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn btn-primary">Let's work together</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+<!-- ===== hero ===== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="status"><span class="dot"></span>Open to developer roles · Lahore, Pakistan</span>
+      <h1>Building software<br><span class="grad">that ships.</span></h1>
+      <p class="role" id="typed" aria-live="off"></p>
+      <p class="intro">I build Android apps in Java and websites that businesses actually run on. So far that's meant apps backed by Firebase and SQLite, WordPress and WooCommerce stores for paying clients, and a summer spent teaching Android development to a room full of students. Right now I'm a web developer intern at Digicon Valley, looking for my first full-time engineering role.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-meta">
+        <div><b data-count="18">0</b><span>TECHNOLOGIES</span></div>
+        <div><b data-count="4">0</b><span>DEV ROLES</span></div>
+        <div><b data-count="4">0</b><span>YEARS BUILDING</span></div>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="three-canvas"></canvas>
+      <div class="fallback-orb"></div>
+      <div class="stage-ring"></div>
+      <div class="stage-ring two"></div>
+      <div class="chip c1">Java · Android</div>
+      <div class="chip c2">Firebase · SQLite</div>
+      <div class="chip c3">WordPress · Figma</div>
+    </div>
   </div>
+</section>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo">
-        <span class="logo-mark">MM</span>
-        <span class="logo-text">Majid Mehmood</span>
-      </a>
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Work</a>
-        <a href="#contact" class="nav-cta">Get in touch</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ===== about ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="title">I turn ideas into<br>working products.</h2>
+        <p class="lede">My first real project was a client website back in 2022, and I haven't stopped since. Android came next and that's where most of my hours go now: Java, Firebase, SQLite, and a lot of patience getting layouts to behave on every screen size and Android version.</p>
+        <p class="lede">Teaching changed how I write code. Once you have to explain the activity lifecycle to a class of students, you stop writing things you can't justify. That habit stuck. These days I'm working through Kotlin Multiplatform, and looking for a team where the people around me know more than I do.</p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="about-card"><h3>Android development</h3><p>Java and Android Studio. Firebase for auth and realtime data, SQLite when it has to work with no signal, and Fragments, RecyclerViews and Material layouts that hold up on older phones too.</p></div>
+        <div class="about-card"><h3>Web development</h3><p>WordPress and WooCommerce for clients who need to edit their own site, and hand-written HTML, CSS and JavaScript when a page has to come out exactly right.</p></div>
+        <div class="about-card"><h3>UI/UX design</h3><p>Wireframes, user flows and Figma prototypes before the first line of code. Cheaper to find the problem in a sketch than halfway through a build.</p></div>
+      </div>
     </div>
-  </header>
-
-  <main id="top">
-
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero-spot" id="heroSpot" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="availability anim"><span class="dot"></span> Available for entry-level roles</p>
-          <h1 class="hero-title anim">Majid Mehmood</h1>
-          <p class="hero-role anim">Android &amp; Full-Stack Web Developer</p>
-          <p class="hero-sub anim">
-            I turn real-world problems into intuitive, high-performing apps —
-            native Android with Java &amp; Firebase, and responsive web with
-            HTML, CSS &amp; JavaScript.
-          </p>
-          <div class="hero-actions anim">
-            <a href="#projects" class="btn btn-primary" data-magnetic>View my work</a>
-            <a href="#contact" class="btn btn-ghost">Contact me</a>
-          </div>
-        </div>
-        <div class="hero-visual anim">
-          <div class="portrait" id="portrait" data-tilt>
-            <div class="portrait-glow"></div>
-            <div class="portrait-ring"></div>
-            <div class="portrait-frame">
-              <img src="assets/me.jpg" alt="Majid Mehmood" id="portraitImg" />
-              <div class="portrait-fallback">MM</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section id="about" class="section reveal">
-      <div class="container about-grid">
-        <h2 class="section-title">About</h2>
-        <div class="about-body">
-          <p>
-            I'm a Computer Science graduate from the University of Education,
-            Faisalabad, with hands-on experience across native Android
-            development, full-stack web, and UI/UX. I've designed, built,
-            deployed — and taught — mobile and web applications end to end.
-          </p>
-          <p>
-            My focus is clean architecture and software-engineering best
-            practices. I'm currently looking for an entry-level role where I can
-            keep sharpening my craft and contribute from day one.
-          </p>
-          <div class="about-stats">
-            <div class="stat"><span class="stat-num">4+</span><span class="stat-label">years building</span></div>
-            <div class="stat"><span class="stat-num">10+</span><span class="stat-label">projects shipped</span></div>
-            <div class="stat"><span class="stat-num">2</span><span class="stat-label">disciplines: mobile &amp; web</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section reveal">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <article class="skill-group">
-            <h3>Mobile Development</h3>
-            <div class="tags">
-              <span>Java</span><span>Android Studio</span><span>Firebase</span>
-              <span>SQLite</span><span>XML Layouts</span><span>RecyclerView</span>
-              <span>REST API</span><span>MVVM</span><span>Material Design</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>Web Development</h3>
-            <div class="tags">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              <span>WordPress</span><span>WooCommerce</span><span>Elementor</span>
-              <span>Responsive Design</span><span>SEO</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>UI / UX Design</h3>
-            <div class="tags">
-              <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
-              <span>User Flows</span><span>UI Design</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>Programming &amp; Tools</h3>
-            <div class="tags">
-              <span>SQL</span><span>DSA</span><span>JSON</span>
-              <span>Git &amp; GitHub</span><span>VS Code</span><span>Python</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Selected Work</h2>
-
-        <!-- 1) Scholarshiphive — Web (browser window, no 3D) -->
-        <article class="featured reveal">
-          <div class="featured-copy">
-            <span class="featured-tag">Featured &middot; Web Development</span>
-            <h3>ScholarshipHive Edutancy</h3>
-            <p>
-              A complete study-abroad consultancy website with a homepage,
-              service pages and country landing pages. Hand-built, fully
-              responsive, with a consistent design system reused across every
-              page.
-            </p>
-            <ul class="featured-points">
-              <li>Homepage, Study Visa, IELTS &amp; Scholarship service pages</li>
-              <li>Country landing pages: UK, Italy, France, Germany &amp; more</li>
-              <li>Reusable, commented CSS design system across all pages</li>
-              <li>Responsive layout with partner-university and destination sections</li>
-            </ul>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span></div>
-            <a href="https://scholarshiphiveedutancy.com/" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>Visit live site</a>
-          </div>
-          <div class="featured-visual browser-visual">
-            <div class="browser">
-              <div class="browser-bar">
-                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-                <span class="browser-url">scholarshiphiveedutancy.com</span>
-              </div>
-              <div class="browser-screen">
-                <img class="browser-img" src="assets/scholarshiphive/home.PNG" alt="ScholarshipHive website" />
-              </div>
-            </div>
-            <div class="thumbs">
-              <button class="thumb is-active" data-img="assets/scholarshiphive/home.PNG">Home</button>
-              <button class="thumb" data-img="assets/scholarshiphive/destinations.PNG">Destinations</button>
-              <button class="thumb" data-img="assets/scholarshiphive/uk.PNG">Study in UK</button>
-              <button class="thumb" data-img="assets/scholarshiphive/visa.PNG">Study Visa</button>
-              <button class="thumb" data-img="assets/scholarshiphive/ielts.PNG">IELTS</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2) PlotHub — Android (phone on left, no 3D) -->
-        <article class="featured featured--reverse reveal">
-          <div class="featured-visual">
-            <div class="phone">
-              <div class="phone-glow"></div>
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <video class="phone-video" muted loop autoplay playsinline preload="metadata">
-                  <source src="assets/plothub/demo.mp4" type="video/mp4" />
-                </video>
-                <img class="phone-still" alt="PlotHub screen" hidden />
-              </div>
-            </div>
-            <div class="thumbs">
-              <button class="thumb is-active" data-video><span class="thumb-play">&#9654;</span> Demo</button>
-              <button class="thumb" data-img="assets/plothub/home.jpeg">Home</button>
-              <button class="thumb" data-img="assets/plothub/configure.jpeg">Configure</button>
-              <button class="thumb" data-img="assets/plothub/blueprint.jpeg">2D Plan</button>
-              <button class="thumb" data-img="assets/plothub/view3d.jpeg">3D View</button>
-            </div>
-          </div>
-          <div class="featured-copy">
-            <span class="featured-tag">Featured &middot; Final Year Project</span>
-            <h3>PlotHub — Plot AI</h3>
-            <p>
-              An Intelligent Architectural Visualization System. Enter plot
-              dimensions and preferences, and the app generates a labelled 2D
-              blueprint and an interactive 3D perspective of the whole layout.
-            </p>
-            <ul class="featured-points">
-              <li>Configure plot width, length, orientation &amp; layout variation</li>
-              <li>Auto-generated 2D blueprint with per-room dimensions</li>
-              <li>Interactive 3D perspective you can rotate and zoom</li>
-              <li>Save, import &amp; export designs as JSON</li>
-            </ul>
-            <div class="tags"><span>Java</span><span>Android</span><span>3D Rendering</span><span>JSON</span></div>
-          </div>
-        </article>
-
-        <!-- 3) Agri Track — Android farmer app (phone on right, no 3D) -->
-        <article class="featured reveal">
-          <div class="featured-copy">
-            <span class="featured-tag">Featured &middot; Android App</span>
-            <h3>Agri Track</h3>
-            <p>
-              A Smart Crop &amp; Farm Record Management System built for Barkat
-              Fertilizers. Field staff can register farmers and record their
-              land, crops and contact details — fast and synced to the cloud.
-            </p>
-            <ul class="featured-points">
-              <li>Clean data-entry flow for name, land size &amp; crop type</li>
-              <li>Instant phone-number lookup to pull up records</li>
-              <li>Real-time Firebase backend with Java &amp; Android Studio</li>
-            </ul>
-            <div class="tags"><span>Java</span><span>Android</span><span>Firebase</span><span>SQLite</span></div>
-          </div>
-          <div class="featured-visual">
-            <div class="phone">
-              <div class="phone-glow"></div>
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <video class="phone-video" muted loop autoplay playsinline preload="metadata">
-                  <source src="assets/agri-track/demo.mp4" type="video/mp4" />
-                </video>
-                <img class="phone-still" alt="Agri Track screen" hidden />
-              </div>
-            </div>
-            <div class="thumbs">
-              <button class="thumb is-active" data-video><span class="thumb-play">&#9654;</span> Demo</button>
-              <button class="thumb" data-img="assets/agri-track/splash.PNG">Splash</button>
-              <button class="thumb" data-img="assets/agri-track/form.PNG">Form</button>
-              <button class="thumb" data-img="assets/agri-track/search.PNG">Search</button>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section reveal">
-      <div class="container contact">
-        <h2 class="section-title">Let's work together</h2>
-        <p class="contact-lead">Have a role or a project in mind? I'd love to hear about it.</p>
-        <div class="contact-links">
-          <a href="mailto:majidmehmood316@gmail.com" class="contact-link">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">majidmehmood316@gmail.com</span>
-          </a>
-          <a href="https://www.linkedin.com/in/majid-mehmood-042aba364" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">in/majid-mehmood</span>
-          </a>
-          <a href="tel:+923251069120" class="contact-link">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">+92 325 1069120</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; <span id="year"></span> Majid Mehmood</span>
-      <span>Pakistan</span>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="4">0</b><span>Developer roles held</span></div>
+      <div class="stat"><b data-count="18">0</b><span>Technologies used</span></div>
+      <div class="stat"><b data-count="4">0</b><span>Certifications earned</span></div>
+      <div class="stat"><b data-count="3">0</b><span>Apps &amp; sites shipped</span></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/script.js"></script>
+<!-- ===== skills + tech stack ===== -->
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow reveal">Skills</span>
+    <h2 class="title reveal">The stack I build with</h2>
+    <p class="lede reveal">Everything listed here is something I've used on a real project, not something I read about once.</p>
+    <div class="skills-grid" id="skillsGrid">
+      <div class="skill"><i>Jv</i><div><b>Java</b><em>core language</em></div></div>
+      <div class="skill"><i>An</i><div><b>Android Studio</b><em>native apps</em></div></div>
+      <div class="skill"><i>Fb</i><div><b>Firebase</b><em>auth &amp; realtime data</em></div></div>
+      <div class="skill"><i>Sq</i><div><b>SQLite</b><em>offline storage</em></div></div>
+      <div class="skill"><i>Xm</i><div><b>XML layouts</b><em>Android UI</em></div></div>
+      <div class="skill"><i>Md</i><div><b>Material Design</b><em>interface rules</em></div></div>
+      <div class="skill"><i>Mv</i><div><b>MVVM</b><em>app architecture</em></div></div>
+      <div class="skill"><i>Kt</i><div><b>Kotlin (KMP)</b><em>learning now</em></div></div>
+      <div class="skill"><i>Ap</i><div><b>REST APIs</b><em>data integration</em></div></div>
+      <div class="skill"><i>&lt;/&gt;</i><div><b>HTML5</b><em>structure</em></div></div>
+      <div class="skill"><i>#</i><div><b>CSS3</b><em>layout &amp; motion</em></div></div>
+      <div class="skill"><i>Js</i><div><b>JavaScript</b><em>web interaction</em></div></div>
+      <div class="skill"><i>Py</i><div><b>Python</b><em>scripting &amp; debugging</em></div></div>
+      <div class="skill"><i>Wp</i><div><b>WordPress</b><em>CMS builds</em></div></div>
+      <div class="skill"><i>Wc</i><div><b>WooCommerce</b><em>online stores</em></div></div>
+      <div class="skill"><i>El</i><div><b>Elementor</b><em>page building</em></div></div>
+      <div class="skill"><i>Fg</i><div><b>Figma</b><em>wireframes &amp; prototypes</em></div></div>
+      <div class="skill"><i>Gt</i><div><b>Git &amp; GitHub</b><em>version control</em></div></div>
+    </div>
+    <div class="marquee reveal">
+      <div class="marquee-track" id="mtrack">
+<span>Java</span><span>Android Studio</span><span>Firebase</span><span>SQLite</span><span>XML Layouts</span><span>RecyclerView</span><span>Material Design</span><span>MVVM</span><span>Kotlin Multiplatform</span><span>REST APIs</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>WordPress</span><span>WooCommerce</span><span>Elementor</span><span>Figma</span><span>Git &amp; GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== projects ===== -->
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow reveal">Selected work</span>
+    <h2 class="title reveal">Projects</h2>
+    <p class="lede reveal">Three builds I keep coming back to: a live client website, an offline blueprint engine, and a field app that replaced a stack of paper records.</p>
+    <div class="projects">
+
+      <!-- 01 — ScholarshipHive Edutancy website -->
+      <article class="pcard reveal" data-tilt>
+        <span class="num">01</span>
+        <div class="visual media"
+             data-full="assets/scholarshiphive/home.PNG"
+             data-cap="ScholarshipHive Edutancy — home page">
+          <img class="media-bg" src="assets/scholarshiphive/home.PNG" alt="" aria-hidden="true">
+          <img class="media-item" src="assets/scholarshiphive/home.PNG" alt="ScholarshipHive Edutancy home page" loading="lazy">
+          <span class="media-badge"><span class="dot"></span>LIVE</span>
+        </div>
+        <h3>ScholarshipHive Edutancy — Study Abroad Website</h3>
+        <p>A study abroad consultancy site that's live and taking enquiries. Fourteen country pages, study visa and IELTS services, scholarship listings and partner universities, with every call to action pointed at WhatsApp because that's where their students actually reply.</p>
+        <div class="shots">
+          <button class="shot" type="button" data-full="assets/scholarshiphive/destinations.PNG" data-cap="Study destinations">
+            <img src="assets/scholarshiphive/destinations.PNG" alt="Study destinations section" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/scholarshiphive/uk.PNG" data-cap="Study in the UK page">
+            <img src="assets/scholarshiphive/uk.PNG" alt="Study in the UK page" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/scholarshiphive/visa.PNG" data-cap="Study visa services">
+            <img src="assets/scholarshiphive/visa.PNG" alt="Study visa services page" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/scholarshiphive/ielts.PNG" data-cap="IELTS training program">
+            <img src="assets/scholarshiphive/ielts.PNG" alt="IELTS training program page" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/scholarshiphive/scholarship.PNG" data-cap="Scholarship applications">
+            <img src="assets/scholarshiphive/scholarship.PNG" alt="Scholarship applications page" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/scholarshiphive/universities.PNG" data-cap="Partner universities">
+            <img src="assets/scholarshiphive/universities.PNG" alt="Partner universities strip" loading="lazy"></button>
+        </div>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span><span>Responsive</span></div>
+        <a class="plink" href="https://scholarshiphiveedutancy.com/" target="_blank" rel="noopener">Visit the live site →</a>
+      </article>
+
+      <!-- 02 — PlotHub -->
+      <article class="pcard reveal" data-tilt>
+        <span class="num">02</span>
+        <div class="visual media no-zoom">
+          <img class="media-bg" src="assets/plothub/home.jpeg" alt="" aria-hidden="true">
+          <video class="media-item" src="assets/plothub/demo.mp4" poster="assets/plothub/home.jpeg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="PlotHub app demo"></video>
+        </div>
+        <h3>PlotHub — Intelligent Architectural Visualization</h3>
+        <p>My final year project. Give it a plot size, an orientation and a layout variation, and it draws the full 2D blueprint, then lets you rotate the same house in 3D. Works with no internet at all. Designs save as JSON, so you can export one and load it back later.</p>
+        <div class="shots">
+          <button class="shot" type="button" data-full="assets/plothub/home.jpeg" data-cap="Home — quick insights">
+            <img src="assets/plothub/home.jpeg" alt="PlotHub home screen" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/plothub/dashboard.jpeg" data-cap="Dashboard">
+            <img src="assets/plothub/dashboard.jpeg" alt="PlotHub dashboard" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/plothub/configure.jpeg" data-cap="Configure plot">
+            <img src="assets/plothub/configure.jpeg" alt="PlotHub configure plot screen" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/plothub/blueprint.jpeg" data-cap="2D blueprint analysis">
+            <img src="assets/plothub/blueprint.jpeg" alt="PlotHub 2D blueprint" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/plothub/view3d.jpeg" data-cap="3D perspective">
+            <img src="assets/plothub/view3d.jpeg" alt="PlotHub 3D perspective" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/plothub/saved.jpeg" data-cap="Saved designs">
+            <img src="assets/plothub/saved.jpeg" alt="PlotHub saved designs" loading="lazy"></button>
+        </div>
+        <div class="tags"><span>Java</span><span>Android Studio</span><span>JSON</span><span>Canvas</span><span>2D/3D Rendering</span></div>
+      </article>
+
+      <!-- 03 — Agri Track -->
+      <article class="pcard reveal" data-tilt>
+        <span class="num">03</span>
+        <div class="visual media no-zoom">
+          <img class="media-bg" src="assets/agri-track/splash.PNG" alt="" aria-hidden="true">
+          <video class="media-item" src="assets/agri-track/demo.mp4" poster="assets/agri-track/splash.PNG"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="Agri Track app demo"></video>
+        </div>
+        <h3>Agri Track — Smart Crop &amp; Farm Records</h3>
+        <p>Built for a fertilizer company whose staff were keeping farmer records on paper. Enter the name, land in acres and crop once, then pull the whole record back with nothing but a phone number. Firebase keeps it synced, SQLite keeps it working when the signal drops.</p>
+        <div class="shots">
+          <button class="shot" type="button" data-full="assets/agri-track/splash.PNG" data-cap="Splash screen">
+            <img src="assets/agri-track/splash.PNG" alt="Agri Track splash screen" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/agri-track/form.PNG" data-cap="Farmer record entry">
+            <img src="assets/agri-track/form.PNG" alt="Agri Track data entry form" loading="lazy"></button>
+          <button class="shot" type="button" data-full="assets/agri-track/search.PNG" data-cap="Search by phone number">
+            <img src="assets/agri-track/search.PNG" alt="Agri Track search screen" loading="lazy"></button>
+        </div>
+        <div class="tags"><span>Java</span><span>Android Studio</span><span>Firebase</span><span>SQLite</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== experience + education ===== -->
+<section id="experience">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="title">Where I've built</h2>
+      <div class="timeline">
+        <div class="tl-item"><time>JUN 2026 — PRESENT</time><h4>Web Developer Intern · Digicon Valley</h4><p>Building and customising responsive WordPress sites with the Gutenberg editor, Genesis framework and Stackable blocks. Hand-writing HTML and CSS where blocks fall short, adding JavaScript for interaction, and using Python for automation and debugging. Also handling pages, menus, media and SEO-friendly structure.</p></div>
+        <div class="tl-item"><time>JUN 2025 — SEP 2025</time><h4>Android Developer · Future Tech IT Center</h4><p>Taught native Android in Java end to end, from the first activity to a live Firebase backend. Wrote the project-based curriculum covering app architecture, lifecycle, UI/UX and SQLite, reviewed student code line by line, and sat with them through the bugs.</p></div>
+        <div class="tl-item"><time>MAY 2024 — SEP 2024</time><h4>Android Developer · IT Solution Hub</h4><p>Shipped Java apps that had to run across a wide spread of Android versions and screen sizes. Fragments, Intents and RecyclerViews for navigation, Material Design in XML layouts, and form validation strict enough to catch bad input before it reached the database.</p></div>
+        <div class="tl-item"><time>JUN 2022 — AUG 2022</time><h4>Website Designer · IT Solution Hub</h4><p>Built responsive client sites including a food delivery platform and an online store, using WordPress, WooCommerce and Elementor. Set up Contact Form 7 and WPForms so enquiries landed in the right inbox instead of getting lost.</p></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Education</span>
+      <h2 class="title">Foundations</h2>
+      <div class="timeline">
+        <div class="tl-item"><time>2022 — 2026</time><h4>B.Sc. Computer Science · University of Education, Faisalabad</h4><p>Mobile application development, web technologies, data structures and algorithms, object-oriented programming, database systems and software engineering.</p></div>
+        <div class="tl-item"><time>CERTIFICATIONS</time><h4>Android, Firebase, UI/UX, WordPress</h4><p>Android App Development with Java at Future Tech IT Center and Firebase for Android Developers, both 2024. UI/UX Design Fundamentals and WordPress &amp; WooCommerce Development, 2023.</p></div>
+        <div class="tl-item"><time>LEARNING NOW</time><h4>Kotlin Multiplatform</h4><p>Taking what I know about native Android beyond one platform, and keeping an eye on Flutter while I'm at it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== services ===== -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow reveal">Services</span>
+    <h2 class="title reveal">How I can help</h2>
+    <div class="services">
+      <div class="service reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3fe8ff" stroke-width="1.7"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 5h4"/></svg></div>
+        <h3>Android applications</h3><p>Native Java apps built offline first, with Firebase where you need sync and a Material interface that feels familiar from the first tap.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3fe8ff" stroke-width="1.7"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg></div>
+        <h3>Websites &amp; stores</h3><p>WordPress and WooCommerce builds you can update yourself, or custom HTML, CSS and JavaScript when the design has to be exact.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3fe8ff" stroke-width="1.7"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg></div>
+        <h3>UI/UX design</h3><p>Wireframes, user flows and clickable Figma prototypes, so you can see and use the thing before anyone starts building it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== contact ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <h2>Let's build something</h2>
+      <p>I'm after an entry-level Android or web developer role, and I take on freelance work alongside it. Tell me what you're trying to build and I'll tell you honestly how I'd go about it. Based in Lahore, happy to work remote.</p>
+      <div class="contact-actions">
+        <a href="mailto:majidmehmood316@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="https://wa.me/923251069120?text=Hi%20Majid%2C%20I%20saw%20your%20portfolio" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://github.com/majid-dev932/majid-dev932" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/majid-mehmood-042aba364" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:majidmehmood316@gmail.com">majidmehmood316@gmail.com</a>
+        <a href="https://wa.me/923251069120?text=Hi%20Majid%2C%20I%20saw%20your%20portfolio" target="_blank" rel="noopener">+92 325 1069120</a>
+        <a href="https://github.com/majid-dev932/majid-dev932" target="_blank" rel="noopener">github.com/majid-dev932</a>
+        <a href="https://www.linkedin.com/in/majid-mehmood-042aba364" target="_blank" rel="noopener">linkedin.com/in/majid-mehmood</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Majid Mehmood — Android Developer | Software Developer</span>
+    <span><a href="#home">Back to top</a></span>
+  </div>
+</footer>
+
+<!-- ===== screenshot lightbox ===== -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Project screenshot">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 8 12l7 7"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg>
+  </button>
+  <figure class="lb-stage">
+    <img class="lb-media" id="lbImg" alt="">
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<!-- Three.js for the hero object (page degrades gracefully if it fails to load) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three/r128/three.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
